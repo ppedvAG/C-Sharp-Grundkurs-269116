@@ -14,11 +14,21 @@ class Program
 		{
 			//Eingabe und Parsing der ersten Zahl
 			Console.Write("\nGib eine Zahl ein: ");
-			double zahl1 = double.Parse(Console.ReadLine());
+			double zahl1;
+			if (!double.TryParse(Console.ReadLine(), out zahl1))
+			{
+				Console.WriteLine("Ungültige Eingabe. Wiederholen? (y/n)");
+				continue;
+			}
 
 			//Eingabe und Parsing der zweiten Zahl
 			Console.Write("Gib eine weitere Zahl ein: ");
-			double zahl2 = double.Parse(Console.ReadLine());
+			double zahl2;
+			if (!double.TryParse(Console.ReadLine(), out zahl2))
+			{
+				Console.WriteLine("Ungültige Eingabe. Wiederholen? (y/n)");
+				continue;
+			}
 
 			//Anzeige der möglichen Rechenoperationen
 			Console.WriteLine("\nWähle eine Rechenoperation:");
@@ -35,7 +45,11 @@ class Program
 			//Abfrage der Benutzereingabe
 			Console.Write("Auswahl: ");
 			//Rechenoperation op = Enum.Parse<Rechenoperation>(Console.ReadLine());
-			Rechenoperation op = (Rechenoperation)int.Parse(Console.ReadLine());
+			if (!int.TryParse(Console.ReadLine(), out int auswahlZahl) || auswahlZahl < 1 || auswahlZahl > 4) {
+				Console.WriteLine("Ungültige Eingabe. Wiederholen? (y/n)");
+				continue;
+			}
+			Rechenoperation op = (Rechenoperation)auswahlZahl;
 
 			//Deklaration und Initialisierung der Ergebnisvariablen
 			double ergebnis = 0.0;
@@ -64,11 +78,11 @@ class Program
 					}
 					ergebnis = zahl1 / zahl2;
 					break;
-				default:
-					//Fall, welcher eintrofft, wenn keine valide Rechenoperation ausgewählt wurde
-					Console.WriteLine("\nFehlerhafte Eingabe bei Auswahl der Rechenoperation");
-					Console.WriteLine("Wiederholen? (Y/N) ");
-					continue;
+				//default:
+				//	//Fall, welcher eintrifft, wenn keine valide Rechenoperation ausgewählt wurde
+				//	Console.WriteLine("\nFehlerhafte Eingabe bei Auswahl der Rechenoperation");
+				//	Console.WriteLine("Wiederholen? (Y/N) ");
+				//	continue;
 
 			}
 
