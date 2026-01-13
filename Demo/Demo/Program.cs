@@ -38,6 +38,17 @@
 
 
 
+		// Arrays
+		int[] zahlen = new int[] {1,3,5,7,9};
+
+
+		// boolsche Operatoren
+
+		if (1 <= 1 ) ; // kleiner gleich
+		if (1 >= 1) ; // größer gleich		
+		if(1 == 1) ; // gleich
+		if (1 != 1) ;		
+
 
 		// Readkey wartet auf eine Eingabe des Benutzers
 		Console.ReadKey();
