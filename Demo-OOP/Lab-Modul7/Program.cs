@@ -7,11 +7,6 @@
 			//Ändern des durch Console verwendeten Zeichensatzes auf Unicode (damit das €-Zeichen angezeigt werden kann)
 			Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-			#region Lab 06-07
-			//Lab08 ist Erweiterung von Lab07
-			#endregion
-
-			#region Lab 08: Vererbung
 
 			//Instanziierung verschiedener Fahrzeuge
 			PKW pkw1 = new PKW("Mercedes", 210, 23000, 5);
@@ -28,9 +23,6 @@
 
 
 			fz = new PKW("Audi", 240, 27000, 3);
-
-
-			#endregion
 
 		}
 	}

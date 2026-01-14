@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fahrzeugpark
 {
-	public class Fahrzeug
+	public abstract class Fahrzeug
 	{
 		//Properties
 		public string Name { get; set; }
@@ -81,7 +81,44 @@ namespace Fahrzeugpark
 			}
 		}
 
-		
+		// abstrakte Methode Hupen
+		public abstract void Hupen();
+
+		// Statische Methode GeneriereFahrzeug
+		public static Fahrzeug GeneriereFahrzeug(string name)
+		{
+			Random random = new Random();
+			int typZahl = random.Next(3); // 0 = PKW, 1 = Schiff, 2 = Flugzeug
+			switch(typZahl)
+			{
+				case 0: return new PKW
+							(name,
+							random.Next(80, 350),
+							random.Next(10_000, 200_000),
+							random.Next(2, 4));
+					break;
+				case 1:
+					return new Schiff
+							(name,
+							random.Next(2, 90),
+							random.Next(10_000, 200_000_000),
+							Schiff.SchiffsTreibstoff.Diesel);
+					break;
+				default:
+					return new Flugzeug
+							(name,
+							random.Next(200, 1_200),
+							random.Next(100_000, 500_000_000),
+							random.Next(5_000, 15_000));
+					break;
+			}
+		}
+
+		public override string ToString()
+		{
+			return $"Name: {this.Name}, Typ: {this.GetType().Name}";
+		}
+
 	}
 
 }
