@@ -15,6 +15,13 @@ namespace Demo_OOP {
 			Console.WriteLine(sabine.Info());
 			Console.WriteLine(herbert.Info());
 
+			for (int i = 0; i < 200; i++)
+			{
+				Person p = new Person();
+			}
+
+			Person.SchreibeAnzahlPersonen();
+
 		}
 	}
 }

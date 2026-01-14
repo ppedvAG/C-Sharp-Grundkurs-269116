@@ -4,10 +4,10 @@
 	{
 		static void Main(string[] args)
 		{
-			//Ändern des durch Console verwendeten Zeichensatzes auf Unicode (damit das €-Zeichen angezeigt werden kann)
+			//Ändern des durch Console verwendeten Zeichensatzes auf Unicode (damit das €-Zeich en angezeigt werden kann)
 			Console.OutputEncoding = System.Text.Encoding.Unicode;
 
-			#region Lab 06: Fahrzeug-Klasse
+			
 			//Deklaration einer Fahrzeug-Variablen und Initialisierung mittels einer Fahrzeug-Instanz
 			Fahrzeug fz1 = new Fahrzeug("Mercedes", 190, 23000);
 			//Ausführen der Info()-Methode des Fahrzeugs und Ausgabe in der Konsole

@@ -13,15 +13,15 @@ namespace Fahrzeugpark
 		//Properties
 		public string Name { get; set; }
 		public int MaxGeschwindigkeit { get; set; }
-		public int AktGeschwindigkeit { get; set; }
+		public int AktGeschwindigkeit { get; private set; }
 		public double Preis { get; set; }
 		public bool MotorLaeuft { get; set; }
 
 		//Konstruktor mit Übergabeparametern und Standartwerten
 		public Fahrzeug(string name, int maxG, double preis)
 		{
-			this.Name = name;
-			this.MaxGeschwindigkeit = maxG;
+			Name = name;
+			MaxGeschwindigkeit = maxG;
 			this.Preis = preis;
 			this.AktGeschwindigkeit = 0;
 			this.MotorLaeuft = false;

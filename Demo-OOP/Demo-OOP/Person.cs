@@ -8,8 +8,20 @@ namespace Demo_OOP
 {
 	internal class Person
 	{
+
+		// Statisches Member: anzahl erzeugter Personen-Objekte
+		public static int AnzahlPersonen { get; private set; } = 0;
 		public string Vorname { get; private set; }
 		public string Nachname { get; set; }
+
+		
+		// Statische Methode zur Ausgabe der Anzahl erzeugter Personen-Objekte
+		public static void SchreibeAnzahlPersonen()
+		{
+			//Console.WriteLine(Vorname); Fehler: Statische Methode kann nicht auf nicht-statische Member zugreifen
+
+			Console.WriteLine($"Anzahl erzeugter Personen-Objekte: {AnzahlPersonen}");
+		}
 
 		// privates Feld Alter mit Initialwert 0
 		private int alter = 0;
@@ -47,6 +59,7 @@ namespace Demo_OOP
 		{
 			Vorname = vorname;
 			Nachname = nachname;
+			AnzahlPersonen++; // Erhöhen des statischen Members bei jeder Objekterzeugung
 		}
 
 		// Konstuktorüberladung mit Alter
@@ -69,9 +82,17 @@ namespace Demo_OOP
 		}
 
 		// Info-Methode
-		public string Info()
+		public virtual string Info()
 		{
 			return $"Name: {Vorname} {Nachname}, Alter: {Alter}, Größe: {groesse}cm";
+		}
+
+		
+
+		~Person()
+		{
+			AnzahlPersonen--; // Verringern des statischen Members bei jeder Objektlöschung
+			Console.WriteLine("DESTRUKTOR aufgerufen");
 		}
 	}
 }
