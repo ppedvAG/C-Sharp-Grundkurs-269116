@@ -19,6 +19,7 @@
 			{
 				// ToString-Methode aufrufen und Fahrzeugtyp zählen
 				Console.WriteLine(fz.ToString());
+
 				if(fz is PKW)
 					anzPKW++;
 				else if(fz is Schiff)
