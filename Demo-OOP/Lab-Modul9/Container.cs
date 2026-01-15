@@ -27,7 +27,7 @@ namespace Fahrzeugpark
 			}
 			else
 			{
-				Console.WriteLine("Container ist bereits beladen.");
+				Console.WriteLine("Container ist bereits beladen mit "+GeladenesFahrzeug.Name);
 			}
 		}
 
@@ -43,7 +43,7 @@ namespace Fahrzeugpark
 
 			} else
 			{
-				Console.WriteLine("Container ist leer.");
+				Console.WriteLine("Container ist bereits leer.");
 				return null;
 			}
 		}

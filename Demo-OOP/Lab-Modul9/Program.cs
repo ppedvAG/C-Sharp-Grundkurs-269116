@@ -27,10 +27,10 @@
 			} 
 			if(o2 is IBeladbar && o1 is Fahrzeug)
 			{
-				((IBeladbar)o2).Belade(o1 as Fahrzeug);
-				return o2 as IBeladbar;
+				(o2 as IBeladbar).Belade((Fahrzeug)o1);
+				return (IBeladbar)o2;
 			}
-			Console.WriteLine("Keines der Objekte ist beladbar oder Fahrzeug.");
+			Console.WriteLine("Keines der Objekte ist beladbar oder ein Fahrzeug.");
 			return null;
 		}
 	}
