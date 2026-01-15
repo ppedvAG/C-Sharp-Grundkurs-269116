@@ -8,7 +8,7 @@
 			Queue<Fahrzeug> fzQueue = new Queue<Fahrzeug>();
 			Stack<Fahrzeug> fzStack = new Stack<Fahrzeug>();
 			Dictionary<Fahrzeug, Fahrzeug> fzDict = new Dictionary<Fahrzeug, Fahrzeug>();
-			Random random = new Random();
+			
 			//Deklaration und Initialisierung einer Variablen zur Bestimmung der Anzahl der Durchläufe 
 			int anzahlFahrzeuge = 10;
 
@@ -28,8 +28,8 @@
 
 			for (int i = 0; i < anzahlFahrzeuge; i++)
 			{
-				// Methode ohne verwendung der Methode BeladeWennBeladbar (es wird nur auf fzQueue geladen)
-				////Prüfung, ob das Interface vorhanden ist (mittels Peek(), da die Objekte noch benötigt werden)...
+				//Methode ohne verwendung der Methode BeladeWennBeladbar(es wird nur auf fzQueue geladen)
+				//Prüfung, ob das Interface vorhanden ist (mittels Peek(), da die Objekte noch benötigt werden)...
 				//if (fzQueue.Peek() is IBeladbar)
 				//{
 				//	//...wenn ja, dann Cast in das Interface und Ausführung der Belade()-Methode (mittels Peek())...

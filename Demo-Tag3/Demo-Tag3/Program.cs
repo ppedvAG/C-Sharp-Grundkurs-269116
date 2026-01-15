@@ -48,69 +48,78 @@
 			//}
 
 			// Listen in C#
-			List<int> numbers = new List<int>();
-			numbers.Add(15);
-			numbers.Add(20);
-			numbers.Add(30);
-			numbers.Add(5);
-			numbers.Add(10);
-			
-
-			// Iteration über Liste mit for-Schleife
-			foreach(int number in numbers)
-			{
-				Console.Write(number+", ");
-			}
-			Console.WriteLine();
-
-			// Listen haben viele nützliche Methoden
-			numbers.Remove(15); // Entfernt 15 aus der Liste
-			numbers.Sort(); // Sortiert die Liste aufsteigend
-			Console.WriteLine("15 entfernt und Liste sortiert:");
-			foreach (int number in numbers)
-			{
-				Console.Write(number + ", ");
-			}
-			Console.WriteLine();
-
-			numbers.RemoveAt(numbers.Count - 1); // Entfernt das letzte Element der Liste
-			Console.WriteLine("Letztes Element entfernt:");
-			foreach (int number in numbers)
-			{
-				Console.Write(number + ", ");
-			}
-			Console.WriteLine();
-
-			numbers.AddRange(numbers); // AddRange kann eine Liste an eine Liste anhängen, in diesem Fall verdoppeln wir die Number Liste
-			Console.WriteLine("Liste Verdoppelt");
-			foreach (int number in numbers)
-			{
-				Console.Write(number + ", ");
-			}
-			Console.WriteLine();
-
-			//numbers.Clear(); // Entfernt alle Elemente aus der Liste
-
-			Console.WriteLine("AVG: "+ numbers.Average()); // Berechnet den Durchschnitt der Zahlen in der Liste
-		
-			
-			// Dictionary
-
-			Dictionary<string, int> AgeOfPersons = new Dictionary<string, int>();
-			AgeOfPersons.Add("Max", 25);
-			AgeOfPersons.Add("Anna", 30);
-			AgeOfPersons.Add("John", 22);
-			//AgeOfPersons.Add("Max", 28); // Führt zu Fehler, da Key "Max" schon existiert
-
-			Console.WriteLine("Alter von Anna: " + AgeOfPersons["Anna"]); // Zugriff auf Wert über Key
+			//List<int> numbers = new List<int>();
+			//numbers.Add(15);
+			//numbers.Add(20);
+			//numbers.Add(30);
+			//numbers.Add(5);
+			//numbers.Add(10);
 
 
-			// Generische Liste von Klasse genericList verwenden
-			genericList<string> stringList = new genericList<string>();
-			stringList.AddItem("Hallo");
-			genericList<int> intList = new genericList<int>();
+			//// Iteration über Liste mit for-Schleife
+			//foreach(int number in numbers)
+			//{
+			//	Console.Write(number+", ");
+			//}
+			//Console.WriteLine();
 
-			genericList<double> doubleList = new genericList<double>();
+			//// Listen haben viele nützliche Methoden
+			//numbers.Remove(15); // Entfernt 15 aus der Liste
+			//numbers.Sort(); // Sortiert die Liste aufsteigend
+			//Console.WriteLine("15 entfernt und Liste sortiert:");
+			//foreach (int number in numbers)
+			//{
+			//	Console.Write(number + ", ");
+			//}
+			//Console.WriteLine();
+
+			//numbers.RemoveAt(numbers.Count - 1); // Entfernt das letzte Element der Liste
+			//Console.WriteLine("Letztes Element entfernt:");
+			//foreach (int number in numbers)
+			//{
+			//	Console.Write(number + ", ");
+			//}
+			//Console.WriteLine();
+
+			//numbers.AddRange(numbers); // AddRange kann eine Liste an eine Liste anhängen, in diesem Fall verdoppeln wir die Number Liste
+			//Console.WriteLine("Liste Verdoppelt");
+			//foreach (int number in numbers)
+			//{
+			//	Console.Write(number + ", ");
+			//}
+			//Console.WriteLine();
+
+			////numbers.Clear(); // Entfernt alle Elemente aus der Liste
+
+			//Console.WriteLine("AVG: "+ numbers.Average()); // Berechnet den Durchschnitt der Zahlen in der Liste
+
+
+			//// Dictionary
+
+			//Dictionary<string, int> AgeOfPersons = new Dictionary<string, int>();
+			//AgeOfPersons.Add("Max", 25);
+			//AgeOfPersons.Add("Anna", 30);
+			//AgeOfPersons.Add("John", 22);
+			////AgeOfPersons.Add("Max", 28); // Führt zu Fehler, da Key "Max" schon existiert
+
+			//Console.WriteLine("Alter von Anna: " + AgeOfPersons["Anna"]); // Zugriff auf Wert über Key
+
+
+			//// Generische Liste von Klasse genericList verwenden
+			//genericList<string> stringList = new genericList<string>();
+			//stringList.AddItem("Hallo");
+			//genericList<int> intList = new genericList<int>();
+
+			//genericList<double> doubleList = new genericList<double>();
+
+			// Erweiterungsmethoden
+			List<int> zahlen = new List<int>();
+			//zahlen.Max(); // .Max ist eine Erweiterungsmethode für Listen aus dem Namespace System.Linq
+
+			// eigene Erweitngsmethode verwenden
+			Console.WriteLine("TextTest".CountCapitalCharecters()); // Eigene Erweiterungsmethode aus Erweiterungsmethoden.cs
+
+
 		}
 	}
 
