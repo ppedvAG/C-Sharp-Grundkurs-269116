@@ -15,6 +15,8 @@ namespace Fahrzeugpark
 		public double Preis { get; set; }
 		public bool MotorLaeuft { get; set; }
 
+		public static int AnzahlFahrzeuge { get; private set; } = 0;
+
 		//Konstruktor mit Übergabeparametern und Standartwerten
 		public Fahrzeug(string name, int maxG, double preis)
 		{
@@ -23,6 +25,7 @@ namespace Fahrzeugpark
 			this.Preis = preis;
 			this.AktGeschwindigkeit = 0;
 			this.MotorLaeuft = false;
+			AnzahlFahrzeuge++;
 		}
 
 		//Methode zur Ausgabe von Objektinformationen
