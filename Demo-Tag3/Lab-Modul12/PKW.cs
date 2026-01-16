@@ -11,7 +11,7 @@ namespace Fahrzeugpark
 	{
 		public int AnzahlTueren { get; set; }
 
-		public PKW(string name, int maxG, double preis, int anzTueren) : base(name, maxG, preis)
+		public PKW(string name, int maxGeschwindigkeit, double preis, int anzTueren) : base(name, maxGeschwindigkeit, preis)
 		{
 			this.AnzahlTueren = anzTueren;
 		}
@@ -21,9 +21,9 @@ namespace Fahrzeugpark
 			return "Der PKW " + base.Info() + $" Er hat {this.AnzahlTueren} Türen.";
 		}
 
-		public override void Hupen()
-		{
-			Console.WriteLine("PKW "+Name+" Hupt: Hup Hup!");
-		}
+		//public override void Hupen()
+		//{
+		//	Console.WriteLine("PKW "+Name+" Hupt: Hup Hup!");
+		//}
 	}
 }

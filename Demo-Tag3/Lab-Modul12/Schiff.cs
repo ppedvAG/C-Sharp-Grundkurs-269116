@@ -20,7 +20,7 @@ namespace Fahrzeugpark
 
 
 		//Konstruktor mit Bezug auf den Konstruktor der Mutterklasse (base)
-		public Schiff(string name, int maxG, double preis, SchiffsTreibstoff treibstoff) : base(name, maxG, preis)
+		public Schiff(string name, int maxGeschwindigkeit, double preis, SchiffsTreibstoff treibstoff) : base(name, maxGeschwindigkeit, preis)
 		{
 			this.Treibstoff = treibstoff;
 			this.GeladenesFahrzeug = null; // Sandardwert null für GeladenesFahrzeug
@@ -35,10 +35,10 @@ namespace Fahrzeugpark
 		}
 
 		// Überschreibung der Hupen()-Methode (pflicht weil Hupen abstrakt ist
-		public override void Hupen()
-		{
-			Console.WriteLine("Schiff "+Name+" Hupt: Tuuut Tuuut!");
-		}
+		//public override void Hupen()
+		//{
+		//	Console.WriteLine("Schiff "+Name+" Hupt: Tuuut Tuuut!");
+		//}
 
 		// Methode zum Beladen des Fahrzeugs von IBeladbar wird implementiert
 		public void Belade(Fahrzeug fahrzeug)

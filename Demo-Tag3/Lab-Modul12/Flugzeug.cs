@@ -9,21 +9,21 @@ namespace Fahrzeugpark
 	//vgl. Schiff
 	public class Flugzeug : Fahrzeug
 	{
-		public int MaxFlughöhe { get; set; }
+		public int MaxFlughoehe { get; set; }
 
-		public Flugzeug(string name, int maxG, double preis, int maxFH) : base(name, maxG, preis)
+		public Flugzeug(string name, int maxGeschwindigkeit, double preis, int maxFlughoehe) : base(name, maxGeschwindigkeit, preis)
 		{
-			this.MaxFlughöhe = maxFH;
+			this.MaxFlughoehe = maxFlughoehe;
 		}
 
 		public override string Info()
 		{
-			return "Das Flugzeug " + base.Info() + $" Es kann bis auf {this.MaxFlughöhe}m aufsteigen.";
+			return "Das Flugzeug " + base.Info() + $" Es kann bis auf {this.MaxFlughoehe}m aufsteigen.";
 		}
 
-		public override void Hupen()
-		{
-			Console.WriteLine("Flugzeug "+Name+" Hupt: Biep Biep!");
-		}
+		//public override void Hupen()
+		//{
+		//	Console.WriteLine("Flugzeug "+Name+" Hupt: Biep Biep!");
+		//}
 	}
 }

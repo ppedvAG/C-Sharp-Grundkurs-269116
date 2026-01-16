@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Fahrzeugpark
 {
-	public abstract class Fahrzeug
+	public class Fahrzeug
 	{
 		//Properties
 		public string Name { get; set; }
@@ -17,11 +18,12 @@ namespace Fahrzeugpark
 
 		public static int AnzahlFahrzeuge { get; private set; } = 0;
 
+		
 		//Konstruktor mit Übergabeparametern und Standartwerten
-		public Fahrzeug(string name, int maxG, double preis)
+		public Fahrzeug(string name, int maxGeschwindigkeit, double preis)
 		{
 			Name = name;
-			MaxGeschwindigkeit = maxG;
+			MaxGeschwindigkeit = maxGeschwindigkeit;
 			this.Preis = preis;
 			this.AktGeschwindigkeit = 0;
 			this.MotorLaeuft = false;
@@ -84,8 +86,8 @@ namespace Fahrzeugpark
 			}
 		}
 
-		// abstrakte Methode Hupen
-		public abstract void Hupen();
+		//// abstrakte Methode Hupen
+		//public abstract void Hupen();
 
 		// Statische Methode GeneriereFahrzeug
 		public static Fahrzeug GeneriereFahrzeug(string name)
